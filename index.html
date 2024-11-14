@@ -10,29 +10,30 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <nav class="navbar navbar-dark bg-dark fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <img src="assets/img/musikcity_azulbranco.png" alt="Logo" class="d-inline-block align-text-top">
+                <img src="assets/img/musikcity_azulbranco.png" id="logo" alt="Logo"
+                    class="d-inline-block align-text-top">
             </a>
-            <div class="card bg-dark bg-gradient text-light">
-                <div class="card-body text-center d-flex align-item-center justify-content-center">
-                    <p class="text-center  d-flex align-item-center justify-content-center p-0 m-0">144.159.393 Acessos
-                    </p>
-                </div>
+            <div>
+                <button id="playButton" class="btn btn-outline-secondary"><i class="bi bi-play-fill"></i></button>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
             </div>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-
-            </button>
+            
             <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
                 aria-labelledby="offcanvasDarkNavbarLabel">
                 <div class="offcanvas-header">
+
                     <h5 class="offcanvas-title W-50" id="offcanvasDarkNavbarLabel"><img
                             src="assets/img/musikcity_azulbranco.png" alt="Logo"
                             class="d-inline-block align-text-top img-fluid"></h5>
@@ -45,7 +46,8 @@
                             <a class="nav-link active" aria-current="page" href="#">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Divulgações e Parcerias</a>
+                            <a class="nav-link active" aria-current="page" href="formulario.html">Divulgações e
+                                Parcerias</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="#">Rádios Ao Vivo</a>
@@ -66,158 +68,330 @@
                         </li>
                     </ul>
                     <form class="d-flex mt-3" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-success" type="submit">Search</button>
+                        <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search">
+                        <button class="btn btn-success" type="submit">Pesquisar</button>
                     </form>
                 </div>
             </div>
         </div>
     </nav>
     <br /><br /><br /><br />
-    <main class="content d-flex justify-content-center mt-5">
+
+    <main class="content d-flex justify-content-center flex-column mt-5 px-3">
+        <audio id="music" loop autoplay>
+            <source src="assets/music/index.mp3" type="audio/mp3">
+            Seu navegador não suporta o elemento de áudio.
+        </audio>
+        <div class="text-center">
+            <h3 class="headline mb-4">Conecte-se ao Mundo da Música</h3>
+            <p class="lead">
+                Arranjos e Produção Musical com um toque de sucesso! Se você está buscando parcerias com compositores,
+                cantores, bandas, ou quer expandir sua presença em rádios e gravadoras, nós somos a conexão que você
+                precisa.
+            </p>
+            <div class="cta-buttons d-flex justify-content-center mt-4">
+                <a href="contato.html" class="btn btn-primary mx-2">Entre em Contato</a>
+                <a href="formulario.html" class="btn btn-outline-secondary mx-2">Formulário para divulgação</a>
+            </div>
+        </div>
+
+        <div class="container mt-5">
+            <div class="row align-items-center mb-5">
+                <div class="col-md-6 order-md-2 blocoImgDiv">
+                    <img src="assets/img/HugoBellard.jpg" class="img-fluid rounded shadow-sm imgBloco"
+                        alt="Imagem de Estúdio Musical">
+                </div>
+                <div class="col-md-6 order-md-1">
+                    <h4 class="block-title text-end">Compositores e Cantores</h4>
+                    <p class="text-end">Essa indicação é feita diretamente para Produtores Musicais, Diretores de
+                        Gravadoras, Produção
+                        Musical das Novelas e Programas de Tv a Cabo, Editoras Musicais, selos e outros veículos
+                        importantes.</p>
+                </div>
+            </div>
+
+            <div class="row align-items-center mb-5">
+                <div class="col-md-6 order-md-1 blocoImgDiv">
+                    <img src="assets/img/napoly2.jpg" class="img-fluid rounded shadow-sm imgBloco"
+                        alt="Imagem de Estúdio Musical">
+                </div>
+                <div class="col-md-6 order-md-2">
+                    <h4 class="block-title">Hugo Bellard</h4>
+                    <p>Na foto o maestro Hugo Bellard rege um de seus arranjos que foram Disco de Platina ou de Ouro nos
+                        estúdios da Universal Music RJ (Polygram). No caso era a música 'Sonhos' (Peninha).</p>
+                </div>
+            </div>
+            <div class="row align-items-center mb-5">
+                <div class="col-md-6 order-md-2 blocoImgDiv">
+                    <img src="assets/img/radio.jpeg" class="img-fluid rounded shadow-sm imgBloco" id="imgRadio"
+                        alt="Imagem de Estúdio Musical">
+                </div>
+                <div class="col-md-6 order-md-1">
+                    <h4 class="block-title text-end">Rádio ao Vivo</h4>
+                    <p class="text-end">
+                        Se você está interessado em ouvir canais de rádio ao vivo de todo o Brasil, há uma infinidade de
+                        opções online que oferecem uma programação diversificada. Desde estações que transmitem música
+                        em diversos estilos, como sertanejo, pop, rock, MPB, até rádios que cobrem as últimas notícias,
+                        esportes, entrevistas e programas de entretenimento.
+                        A seguir, confira algumas das principais plataformas e maneiras de acessar essas emissoras,
+                        conectando você com as melhores atrações do Brasil, a qualquer hora e em qualquer lugar.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+        <h2 class="text-center mt-3">Nossos arranjos, produções, autorias, teclados e participações nas
+            gravações do produtor e maestro Hugo Bellard</h2>
+        <table class="table text-center">
+            <tbody>
+                <tr>
+                    <td class="w-50">
+                        <img src="https://musikcity.mus.br/figuras/raulseixas.jpg"
+                            alt="Raul Seixas, cantor e compositor brasileiro" class="img-fluid mb-2 cantorImg">
+                        <p>Raul Seixas</p>
+                    </td>
+                    <td>
+                        <img src="https://musikcity.mus.br/figuras/artistas/jorge-benjor2.jpg"
+                            alt="Jorge Ben Jor, cantor e compositor brasileiro" class="img-fluid mb-2 cantorImg">
+                        <p>Jorge Ben Jor</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="https://musikcity.mus.br/artistas/fotos/timmaia.jpg"
+                            alt="Tim Maia, cantor e compositor brasileiro" class="img-fluid mb-2 cantorImg">
+                        <p>Tim Maia</p>
+                    </td>
+                    <td>
+                        <img src="https://musikcity.mus.br/figuras/artistas/serginho_roupanova.jpg"
+                            alt="Serginho Roupa Nova, cantor e compositor brasileiro" class="img-fluid mb-2 cantorImg">
+                        <p>Serginho Roupa Nova</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="https://musikcity.mus.br/figuras/artistas/ivan-lins.jpg"
+                            alt="Ivan Lins, cantor e compositor brasileiro" class="img-fluid mb-2 cantorImg">
+                        <p>Ivan Lins</p>
+                    </td>
+                    <td>
+                        <img src="https://musikcity.mus.br/figuras/artistas/sidney_magal2.jpg"
+                            alt="Sidney Magal, cantor e compositor brasileiro" class="img-fluid mb-2 cantorImg">
+                        <p>Sidney Magal</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="https://musikcity.mus.br/figuras/peninhanew.jpg"
+                            alt="Peninha (Sonhos), cantor e compositor brasileiro" class="img-fluid mb-2 cantorImg">
+                        <p>Peninha (Sonhos)</p>
+                    </td>
+                    <td>
+                        <img src="https://musikcity.mus.br/figuras/artistas/wando_mini3.jpg"
+                            alt="Wando, cantor e compositor brasileiro" class="img-fluid mb-2 cantorImg">
+                        <p>Wando</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="https://musikcity.mus.br/figuras/artistas/jose-augusto.jpg"
+                            alt="José Augusto, cantor e compositor brasileiro" class="img-fluid mb-2 cantorImg">
+                        <p>José Augusto</p>
+                    </td>
+                    <td>
+                        <img src="https://musikcity.mus.br/figuras/limaonew.jpg"
+                            alt="Limão com Mel, cantor e compositor brasileiro" class="img-fluid mb-2 cantorImg">
+                        <p>Limão com Mel</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="https://musikcity.mus.br/figuras/luizmelodia.jpg"
+                            alt="Luiz Melodia, cantor e compositor brasileiro" class="img-fluid mb-2 cantorImg">
+                        <p>Luiz Melodia</p>
+                    </td>
+                    <td>
+                        <img src="https://musikcity.mus.br/figuras/artistas/renatoeseusbluecaps.jpg"
+                            alt="Renato & Seus Blue Caps, cantor e compositor brasileiro"
+                            class="img-fluid mb-2 cantorImg">
+                        <p>Renato & Seus Blue Caps</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="https://musikcity.mus.br/figuras/rosana.jpg"
+                            alt="Rosana, cantora e compositora brasileira" class="img-fluid mb-2 cantorImg">
+                        <p>Rosana</p>
+                    </td>
+                    <td>
+                        <img src="https://musikcity.mus.br/figuras/golden9.jpg"
+                            alt="Golden Boys, cantor e compositor brasileiro" class="img-fluid mb-2 cantorImg">
+                        <p>Golden Boys</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="https://musikcity.mus.br/figuras/lenynew.jpg"
+                            alt="Leny Andrade, cantora e compositora brasileira" class="img-fluid mb-2 cantorImg">
+                        <p>Leny Andrade</p>
+                    </td>
+                    <td>
+                        <img src="https://musikcity.mus.br/figuras/artistas/carlos_lyra.jpg"
+                            alt="Carlos Lyra, cantor e compositor brasileiro" class="img-fluid mb-2 cantorImg">
+                        <p>Carlos Lyra</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="https://musikcity.mus.br/figuras/ayrao.jpg"
+                            alt="Luis Ayrão, cantor e compositor brasileiro" class="img-fluid mb-2 cantorImg">
+                        <p>Luis Ayrão</p>
+                    </td>
+                    <td>
+                        <img src="https://musikcity.mus.br/figuras/marcosvalle.jpg"
+                            alt="Marcos Valle, cantor e compositor brasileiro" class="img-fluid mb-2 cantorImg">
+                        <p>Marcos Valle</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="https://musikcity.mus.br/figuras/thefeversnew.jpg"
+                            alt="The Fevers, cantor e compositor brasileiro" class="img-fluid mb-2 cantorImg">
+                        <p>The Fevers</p>
+                    </td>
+                    <td>
+                        <img src="https://musikcity.mus.br/figuras/artistas/adriana.jpg"
+                            alt="Adriana, cantora e compositora brasileira" class="img-fluid mb-2 cantorImg">
+                        <p>Adriana</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="https://musikcity.mus.br/figuras/artistas/marizinha2.jpg"
+                            alt="Marizinha, cantora e compositora brasileira" class="img-fluid mb-2 cantorImg">
+                        <p>Marizinha</p>
+                    </td>
+                    <td>
+                        <img src="https://musikcity.mus.br/figuras/artistas/jorge-luis-chacin.jpg"
+                            alt="Jorge Luis Chacín, cantor e compositor brasileiro" class="img-fluid mb-2 cantorImg">
+                        <p>Jorge Luis Chacín (Miami-Caracas)</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="https://musikcity.mus.br/figuras/artistas/rosemary.jpg"
+                            alt="Rosemary, cantora e compositora brasileira" class="img-fluid mb-2 cantorImg">
+                        <p>Rosemary</p>
+                    </td>
+                    <td>
+                        <img src="https://musikcity.mus.br/figuras/artistas/taiguara.jpg"
+                            alt="Taiguara, cantor e compositor brasileiro" class="img-fluid mb-2 cantorImg">
+                        <p>Taiguara</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2 class="text-center">Nossas planos</h2>
+        <div class="container mt-5 mb-5">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card border-primary shadow-lg d-flex flex-column">
+                        <div class="card-header text-center bg-primary text-white">
+                            <h5 class="card-title">Opção 1 - Básica</h5>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title text-center text-danger">R$ 980,00 à vista</h5>
+                            <p class="card-text">Encaminhamento de 40 EPS/CDs/Pendrives para produtores, gravadoras e
+                                TV.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check-circle"></i> Envio para 40 produtores e gravadoras.</li>
+                                <li><i class="fas fa-check-circle"></i> Duração de 45 dias.</li>
+                                <li><i class="fas fa-check-circle"></i> Fica no site por 1 ano e 2 meses.</li>
+                            </ul>
+                            <p><strong>OBS: Gravação demo permitida.</strong></p>
+                        </div>
+                        <div class="card-footer text-center mt-auto">
+                            <a class="btn btn-primary w-100" href="formulario.html">Adquirir Agora</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card border-success shadow-lg d-flex flex-column">
+                        <div class="card-header text-center bg-success text-white">
+                            <h5 class="card-title">Opção 2 - Reforçada</h5>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title text-center text-danger">R$ 1.380,00</h5>
+                            <p class="card-text">Encaminhamento de 60 EPS/CDs/Pendrives para mais produtores e diretores
+                                de gravadoras.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check-circle"></i> Envio para 60 produtores e diretores.</li>
+                                <li><i class="fas fa-check-circle"></i> Duração de 60 dias.</li>
+                                <li><i class="fas fa-check-circle"></i> Fica no site por 1 ano e 6 meses.</li>
+                            </ul>
+                            <p><strong>OBS: Gravação demo permitida.</strong></p>
+                        </div>
+                        <div class="card-footer text-center mt-auto">
+                            <a class="btn btn-success w-100" href="formulario.html">Adquirir Agora</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card border-danger shadow-lg d-flex flex-column">
+                        <div class="card-header text-center bg-danger text-white">
+                            <h5 class="card-title">Opção 3 - Super Reforçada</h5>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title text-center text-danger">R$ 1.780,00</h5>
+                            <p class="card-text">Encaminhamento de 80 EPS/CDs/Pendrives para programas de TV, produtores
+                                e gravadoras.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check-circle"></i> Envio para produtores e gravadoras
+                                    internacionais.</li>
+                                <li><i class="fas fa-check-circle"></i> Duração de 80 dias.</li>
+                                <li><i class="fas fa-check-circle"></i> Fica no site por 2 anos.</li>
+                            </ul>
+                            <p><strong>OBS: Gravação demo permitida.</strong></p>
+                        </div>
+                        <div class="card-footer text-center mt-auto">
+                            <a class="btn btn-danger w-100" href="formulario.html">Adquirir Agora</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </main>
 
-
-    <div class="container text-center">
-        <div class="row gap-3">
-            <div class="col-6 col-sm-3 card" style="width: 18rem;">
-                <img src="assets/img/napoly2.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <p class="card-text">O produtor e maestro Hugo Bellard alcançou até hoje (2024) mais de 20
-                        milhões de discos
-                        de ouro e
-                        platina como arranjador, produtor, autor e maestro, trabalhando para as grandes gravadoras
-                        do Brasil e
-                        algumas do exterior.
-                        Diante do sucesso no meio musical, ele fundou o site MusikCity® em 1997 com o objetivo de
-                        prestar os
-                        trabalhos
-                        que faz no meio musical também para amadores.
-                        Ou também para profissionais que ainda não alcançaram o tão almejado sucesso nas rádios,
-                        tvs, show ao
-                        vivo e
-                        outros segmentos que pagam o maior Ecad.</p>
+            <footer>
+                <div class="container">
+                    <p class="mb-0">&copy; 2024 Empresa Musikcity. Todos os direitos reservados.</p>
                 </div>
-            </div>
-            <div class="col-6 col-sm-3 card" style="width: 18rem;">
-                <img src="assets/img/HugoBellard.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <p class="card-text">Além dos arranjos e gravações que o tornaram produtor/maestro de sucesso,
-                        o outro objetivo do site é utilizar os canais do maestro no meio musical para indicar novos
-                        talentos
-                        como cantores, bandas, compositores e letristas, sem limite máximo de idade.
-                        Essa indicação é feita diretamente para Produtores Musicais, Diretores de Gravadoras,
-                        Produção Musical
-                        das Novelas e Programas de Tv a Cabo, Editoras Musicais, selos e outros veículos
-                        importantes.
-                        Isso tanto no Brasil como para alguns locais no exterior.</p>
-                </div>
-            </div>
+            </footer>
 
-            <div class="col-6 col-sm-3 card" style="width: 18rem;">
-                <img src="assets/img/ClaudiaLeiteSabrinaMiskier.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <p class="card-text">Na foto Claudia Leite ao lado de Sabrina Niskier, assistente do maestro Hugo Bellard.</p>
-                </div>
-            </div>
-
-            <div class="col-6 col-sm-3 card" style="width: 18rem;">
-                <img src="assets/img/Sandy.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <p class="card-text">A trilha do filme "Quando Eu Era Vivo" de 2014 com Antonio Fagundes e Sandy possui música de
-                        autoria, arranjada e produzida por Hugo Bellard.</p>
-                </div>
-            </div>
-
-            <div class="col-6 col-sm-3 card" style="width: 18rem;">
-                <img src="assets/img/jorge_ben_jor.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <p class="card-text">Com arranjos do maestro Hugo Bellard, responsável pelo site MusikCity, o album "Tábuas das
-                        Esmeraldas" de Jorge Ben Jor foi eleito pela revista inglesa Rolling Stones como um dos 6
-                        melhores álbuns gravados no Brasil em todos os tempos.</p>
-                </div>
-            </div>
-
-            <div class="col-6 col-sm-3 card" style="width: 18rem;">
-                <img src="assets/img/peninhanew.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <p class="card-text">O sucesso e disco de platina 'Sonhos' (peninha) é mais um arranjo de Hugo Bellard.</p>
-                </div>
-            </div>
-
-
-            <div class="col-6 col-sm-3 card" style="width: 18rem;">
-                <img src="assets/img/roupa_nova_mini.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <p class="card-text">Nando e Kiko, da banda Roupa Nova, tendo ao centro o produtor e maestro Hugo Bellard, em foto
-                        recente na casa de um deles.
-                        Música de Hugo Bellard cantada pelo Serginho do Roupa Nova, entrou na novela Pecado Rasgado.</p>
-                </div>
-            </div>
-
-            <div class="col-6 col-sm-3 card" style="width: 18rem;">
-                <img src="assets/img/mariozinho_rocha.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <p class="card-text">Mariozinho Rocha Até pouco tempo era o Diretor musical das novelas da TV Globo. Agora ocupa a
-                        presidência da ABRAMUS, Sociedade de Compositores ligada ao Ecade.
-                        Por isso ainda mantém uma grande influência no envio de músicas para as novelas.
-                        Foi Mariozinho quem indicou o Hugo Bellard para fazer o arranjo original da consagrada Música anual
-                        de Natal da TV Globo.</p>
-                </div>
-            </div>
-
-            <div class="col-6 col-sm-3 card" style="width: 18rem;">
-                <img src="assets/img/elizangela2.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <p class="card-text">Elizangela gravou a música mais vendida em compacto simples no Brasil em todos os tempos: "Pertinho
-                        de Você", em produção, arranjo e autoria de Hugo Bellard.</p>
-                </div>
-            </div>
-
-            <div class="col-6 col-sm-3 card" style="width: 18rem;">
-                <img src="assets/img/sidney_magal.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <p class="card-text">O sucesso "Meu Sangue Ferve Por Você" com Sidney Magal é arranjo de Hugo Bellard em gravação para a
-                        Universal Music - Polygram.</p>
-                </div>
-            </div>
-
-            <div class="col-6 col-sm-3 card" style="width: 18rem;">
-                <img src="assets/img/fernandomendes2.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <p class="card-text">Hugo Bellard fez o arranjo de "Você Não Me Ensinou a Te Esquecer" do Fernando Mendes que está ao lado
-                        dele na foto.
-                        A música foi mais tarde regravada pelo Caetano Veloso.</p>
-                </div>
-            </div>
-
-            <div class="col-6 col-sm-3 card" style="width: 18rem;">
-                <img src="assets/img/jose_augusto.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <p class="card-text">O cantor José Augusto gravou seus primeiros grandes sucessos com arranjos de Hugo Bellard na Emi.
-                        Dois deles, a música "Meu Primeiro Amor" (Mi Primer Amor) e Candilejas, entraram na parada do México
-                        e na latina da Billboard vendendo mais de dois milhão de álbuns em 5 países.</p>
-                </div>
-            </div>
-
-            <div class="col-6 col-sm-3 card" style="width: 18rem;">
-                <img src="assets/img/wando_mini2.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <p class="card-text">O cantor Wando gravou "Me Cace Me Ache", de Hugo Bellard e Paulo Sérgio Valle, além de outra música
-                        da dupla - "Não Posso Ser Teu Amigo".
-                        O album foi o de maior vendagem na carreira do Wando.</p>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-
-    <div class="row gx-5">
-        <div class="col">
-            <div class="p-3"><img src="assets/img/ban_divulg_2007.gif" width="200px" height="200px"></div>
-        </div>
-    </div>
 </body>
+<script>
+    var music = document.getElementById("music");
+    var playButton = document.getElementById("playButton");
+
+    playButton.addEventListener("click", function () {
+        if (music.paused) {
+            // Iniciar a música
+            music.play().catch(function (error) {
+                console.error("Erro ao tentar tocar a música: ", error);
+            });
+            // Mudar o texto do botão para "Pausar Música"
+            playButton.innerHTML = "<i class='bi bi-pause-fill'></i>";
+        } else {
+            // Pausar a música
+            music.pause();
+            // Mudar o texto do botão para "Tocar Música"
+            playButton.innerHTML = "<i class='bi bi-play-fill'></i>";
+        }
+    });
+</script>
+
 </html>

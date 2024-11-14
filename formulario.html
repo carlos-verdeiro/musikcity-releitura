@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>formulario</title>
+  <link rel="stylesheet" href="forms.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  </script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+</head>
+
+<body>
+  <audio id="music" loop autoplay>
+    <source src="assets/music/form.mp3" type="audio/mp3">
+    Seu navegador não suporta o elemento de áudio.
+  </audio>
+  <nav class="navbar navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="assets/img/musikcity_azulbranco.png" id="logo" alt="Logo" class="d-inline-block align-text-top">
+      </a>
+      <div>
+        <button id="playButton" class="btn btn-outline-secondary"><i class="bi bi-play-fill"></i></button>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
+          aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+
+        </button>
+      </div>
+
+      <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+        aria-labelledby="offcanvasDarkNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title W-50" id="offcanvasDarkNavbarLabel"><img src="assets/img/musikcity_azulbranco.png"
+              alt="Logo" class="d-inline-block align-text-top img-fluid"></h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+            aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="formulario.html">Divulgações e
+                Parcerias</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Rádios Ao Vivo</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">Canais do Site</a>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="#">Divulgação para Gravadoras e Produtores</a></li>
+                <li><a class="dropdown-item" href="#">Gravação e Arranjos</a></li>
+                <li><a class="dropdown-item" href="#">Parceria para Letristas Amadores e Poetas</a></li>
+                <li><a class="dropdown-item" href="#">Consultoria Musical com quem Entende</a></li>
+                <li><a class="dropdown-item" href="#">Rádios do Brasil ao Vivo</a></li>
+                <li><a class="dropdown-item" href="#">Partitura e Registro de Música e Letra</a></li>
+                <li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex mt-3" role="search">
+            <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search">
+            <button class="btn btn-success" type="submit">Pesquisar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="content d-flex justify-content-center align-items-center flex-column mt-5 px-3">
+    <div class="myb-5 mt-5"></div>
+    <h4 class="mb-4 mt-5">Formulário de divulgação</h4>
+    <form class="row g-3 needs-validation w-50 rounded border p-2" novalidate>
+      <div class="col-md-4">
+        <label for="nomeCompleto" class="form-label">Nome Completo</label>
+        <input type="text" class="form-control" id="nomeCompleto" required>
+        <div class="invalid-feedback">Por favor, insira seu nome completo.</div>
+      </div>
+      <div class="col-md-4">
+        <label for="nomeArtistico" class="form-label">Nome Artístico</label>
+        <input type="text" class="form-control" id="nomeArtistico" required>
+        <div class="invalid-feedback">Por favor, insira seu nome artístico.</div>
+      </div>
+      <div class="col-md-4">
+        <label for="telefone" class="form-label">Telefone</label>
+        <input type="text" class="form-control" placeholder="(00) 0 00000-0000" id="telefone" required>
+        <div class="invalid-feedback">Por favor, insira um número de telefone válido.</div>
+      </div>
+      <div class="col-md-3">
+        <label for="idade" class="form-label">Idade</label>
+        <input type="number" class="form-control" id="idade" required min="0">
+        <div class="invalid-feedback">Por favor, forneça sua idade.</div>
+      </div>
+      <div class="col-md-4">
+        <label for="email" class="form-label">Email válido</label>
+        <input type="email" class="form-control" id="email" required>
+        <div class="invalid-feedback">Por favor, forneça um email válido.</div>
+      </div>
+      <div class="col-md-4">
+        <label for="estiloMusical" class="form-label">Estilo (ritmo) das músicas?</label>
+        <input type="text" class="form-control" id="estiloMusical" required>
+        <div class="invalid-feedback">Por favor, insira um estilo musical.</div>
+      </div>
+      <div class="col-md-6">
+        <label for="cidade" class="form-label">Cidade</label>
+        <input type="text" class="form-control" id="cidade" required>
+        <div class="invalid-feedback">Por favor, forneça uma cidade válida.</div>
+      </div>
+      <div class="col-md-3">
+        <label for="estado" class="form-label">Estado</label>
+        <select class="form-select" id="estado" required>
+          <option selected disabled value="">Escolha...</option>
+          <option value="AC">Acre</option>
+          <option value="AL">Alagoas</option>
+          <option value="AP">Amapá</option>
+          <option value="AM">Amazonas</option>
+          <option value="BA">Bahia</option>
+          <option value="CE">Ceará</option>
+          <option value="DF">Distrito Federal</option>
+          <option value="ES">Espírito Santo</option>
+          <option value="GO">Goiás</option>
+          <option value="MA">Maranhão</option>
+          <option value="MT">Mato Grosso</option>
+          <option value="MS">Mato Grosso do Sul</option>
+          <option value="MG">Minas Gerais</option>
+          <option value="PA">Pará</option>
+          <option value="PB">Paraíba</option>
+          <option value="PR">Paraná</option>
+          <option value="PE">Pernambuco</option>
+          <option value="PI">Piauí</option>
+          <option value="RJ">Rio de Janeiro</option>
+          <option value="RN">Rio Grande do Norte</option>
+          <option value="RS">Rio Grande do Sul</option>
+          <option value="RO">Rondônia</option>
+          <option value="RR">Roraima</option>
+          <option value="SC">Santa Catarina</option>
+          <option value="SP">São Paulo</option>
+          <option value="SE">Sergipe</option>
+          <option value="TO">Tocantins</option>
+        </select>
+
+        <div class="invalid-feedback">Por favor, selecione um estado.</div>
+      </div>
+      <div class="col-md-3">
+        <label for="cep" class="form-label">CEP</label>
+        <input type="text" class="form-control" placeholder="00000-000" id="cep" required>
+        <div class="invalid-feedback">Por favor, insira um CEP válido.</div>
+      </div>
+      <div class="col-md-12">
+        <h6>Selecione seu plano</h6>
+        <div class="form-check">
+          <input class="form-check-input" checked type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+          <label class="form-check-label" for="flexRadioDefault1">
+            Básica
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault12">
+          <label class="form-check-label" for="flexRadioDefault12">
+            Reforçada
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault13">
+          <label class="form-check-label" for="flexRadioDefault13">
+            Super Reforçada
+          </label>
+        </div>
+
+      </div>
+      <div class="col-md-12">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="termos" required>
+          <label class="form-check-label" for="termos">
+            Aceito os termos e condições.
+          </label>
+          <div class="invalid-feedback">Você deve aceitar os termos e condições.</div>
+        </div>
+      </div>
+      <div class="col-12">
+        <button class="btn btn-primary" type="submit">Enviar</button>
+      </div>
+    </form>
+    <h2 class="text-center">Nossos planos</h2>
+    <div class="container mt-5 mb-5">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card border-primary shadow-lg d-flex flex-column">
+            <div class="card-header text-center bg-primary text-white">
+              <h5 class="card-title">Opção 1 - Básica</h5>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title text-center text-danger">R$ 980,00 à vista</h5>
+              <p class="card-text">Encaminhamento de 40 EPS/CDs/Pendrives para produtores, gravadoras e
+                TV.</p>
+              <ul class="list-unstyled">
+                <li><i class="fas fa-check-circle"></i> Envio para 40 produtores e gravadoras.</li>
+                <li><i class="fas fa-check-circle"></i> Duração de 45 dias.</li>
+                <li><i class="fas fa-check-circle"></i> Fica no site por 1 ano e 2 meses.</li>
+              </ul>
+              <p><strong>OBS: Gravação demo permitida.</strong></p>
+            </div>
+            <div class="card-footer text-center mt-auto">
+              <a class="btn btn-primary w-100" href="#">Adquirir Agora</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card border-success shadow-lg d-flex flex-column">
+            <div class="card-header text-center bg-success text-white">
+              <h5 class="card-title">Opção 2 - Reforçada</h5>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title text-center text-danger">R$ 1.380,00</h5>
+              <p class="card-text">Encaminhamento de 60 EPS/CDs/Pendrives para mais produtores e diretores
+                de gravadoras.</p>
+              <ul class="list-unstyled">
+                <li><i class="fas fa-check-circle"></i> Envio para 60 produtores e diretores.</li>
+                <li><i class="fas fa-check-circle"></i> Duração de 60 dias.</li>
+                <li><i class="fas fa-check-circle"></i> Fica no site por 1 ano e 6 meses.</li>
+              </ul>
+              <p><strong>OBS: Gravação demo permitida.</strong></p>
+            </div>
+            <div class="card-footer text-center mt-auto">
+              <a class="btn btn-success w-100" href="#">Adquirir Agora</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card border-danger shadow-lg d-flex flex-column">
+            <div class="card-header text-center bg-danger text-white">
+              <h5 class="card-title">Opção 3 - Super Reforçada</h5>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title text-center text-danger">R$ 1.780,00</h5>
+              <p class="card-text">Encaminhamento de 80 EPS/CDs/Pendrives para programas de TV, produtores
+                e gravadoras.</p>
+              <ul class="list-unstyled">
+                <li><i class="fas fa-check-circle"></i> Envio para produtores e gravadoras
+                  internacionais.</li>
+                <li><i class="fas fa-check-circle"></i> Duração de 80 dias.</li>
+                <li><i class="fas fa-check-circle"></i> Fica no site por 2 anos.</li>
+              </ul>
+              <p><strong>OBS: Gravação demo permitida.</strong></p>
+            </div>
+            <div class="card-footer text-center mt-auto">
+              <a class="btn btn-danger w-100" href="#">Adquirir Agora</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script>
+    var music = document.getElementById("music");
+    var playButton = document.getElementById("playButton");
+
+    playButton.addEventListener("click", function () {
+      if (music.paused) {
+        // Iniciar a música
+        music.play().catch(function (error) {
+          console.error("Erro ao tentar tocar a música: ", error);
+        });
+        // Mudar o texto do botão para "Pausar Música"
+        playButton.innerHTML = "<i class='bi bi-pause-fill'></i>";
+      } else {
+        // Pausar a música
+        music.pause();
+        // Mudar o texto do botão para "Tocar Música"
+        playButton.innerHTML = "<i class='bi bi-play-fill'></i>";
+      }
+    });
+  </script>
+  <footer>
+    <div class="container">
+      <p class="mb-0">&copy; 2024 Empresa Musikcity. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+</body>
+
+</html>
